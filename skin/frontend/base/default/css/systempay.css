@@ -1,0 +1,130 @@
+/**
+ * Systempay V2-Payment Module version 1.7.1 for Magento 1.4-1.9. Support contact : supportvad@lyra-network.com.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is licensed under the Open Software License version 3.0
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category  payment
+ * @package   systempay
+ * @author    Lyra Network (http://www.lyra-network.com/)
+ * @copyright 2014-2017 Lyra Network and contributors
+ * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+
+label[for=p_method_systempay_standard], label[for=p_method_systempay_multi],
+label[for=p_method_systempay_cof3xcb], label[for=p_method_systempay_gift],
+label[for=p_method_systempay_oney], label[for=p_method_systempay_paypal],
+label[for=p_method_systempay_sofort], label[for=p_method_systempay_postfinance],
+label[for=p_method_systempay_giropay], label[for=p_method_systempay_ideal] {
+    width: 90% !important; 
+    min-height: 30px !important;
+    padding-top: 6px !important;
+    background-color: #f4f4f4 !important;
+    display: inline-block !important;
+}
+
+#payment_form_systempay_multi li {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+}
+
+.systempay-label {
+    margin-bottom: 15px;
+}
+
+.systempay-method-img {
+    height: 30px;
+    float: right !important;
+}
+
+.systempay-card, .systempay-option {
+    display: inline-block;
+}
+
+.systempay-option {
+    padding-bottom: 5px;
+}
+
+.systempay-card label, .systempay-option label {
+    float: none !important;
+    max-width: none !important;
+    padding-right: 5px !important;
+    padding-left: 2px !important;
+}
+
+.systempay-card label img {
+    margin-right: 10px;
+    max-height: 25px;
+    vertical-align: middle;
+}
+
+.systempay-register-message label {
+    font-weight: normal;
+}
+
+.systempay-register-message label em {
+    font-weight: bold;
+    font-style: normal;
+}
+
+a.systempay-payment-link {
+    color: #39C;
+    text-decoration: none;
+    font-family: Georgia,Times,"Times New Roman",serif;
+    font-style: italic;
+    font-size: 12px;
+}
+
+#systempay_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    background: #000 none repeat scroll 0 0;
+    opacity: 0.65; /* Safari, Opera */
+    filter: alpha(opacity=65); /* IE */
+    -moz-opacity: 0.65; /* FireFox */
+}
+
+#systempay_iframe_warn {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background: #ffffff none repeat scroll 0 0;
+    z-index: 100;
+    display: table;
+}
+
+#systempay_iframe {
+    position: relative;
+    width: 100%;
+    min-height: 530px;
+    border: 0 none;
+    background: #ffffff none repeat scroll 0 0;
+    z-index: 100;
+}
+
+.systempay_oney_review .small {
+    font-size: 10px;
+}
+
+.systempay_oney_review {
+    margin-left: 20px;
+    border: 1px solid black;
+    font-size: 13px !important;
+}
+
+.systempay_oney_review thead tr {
+    border-bottom: 1px solid black;
+}
+
+.systempay_oney_review td, .systempay_oney_review th {
+    padding: 0 6px;
+}

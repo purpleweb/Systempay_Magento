@@ -1,0 +1,12 @@
+app/design/frontend/base/default/layout/systempay.xml    app/design/frontend/base/default/layout/systempay.xml
+app/design/frontend/base/default/template/systempay/    app/design/frontend/base/default/template/systempay/
+app/design/adminhtml/default/default/layout/systempay.xml    app/design/adminhtml/default/default/layout/systempay.xml
+app/design/adminhtml/default/default/template/systempay/    app/design/adminhtml/default/default/template/systempay/
+app/code/community/Lyra/Systempay/    app/code/community/Lyra/Systempay/
+app/locale/de_DE/Lyra_Systempay.csv    app/locale/de_DE/Lyra_Systempay.csv
+app/locale/fr_FR/Lyra_Systempay.csv    app/locale/fr_FR/Lyra_Systempay.csv
+app/locale/en_US/Lyra_Systempay.csv    app/locale/en_US/Lyra_Systempay.csv
+app/etc/modules/Lyra_Systempay.xml    app/etc/modules/Lyra_Systempay.xml
+media/systempay/    media/systempay/
+skin/frontend/base/default/css/systempay.css    skin/frontend/base/default/css/systempay.css
+skin/adminhtml/default/default/systempay.css    skin/adminhtml/default/default/systempay.css

@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <checkout_onepage_index>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/systempay.css</stylesheet></action>
+            <block type="core/template" name="systempay_oneclick_js" template="systempay/oneclick/js.phtml" />
+        </reference>
+    </checkout_onepage_index>
+
+    <checkout_onepage_review>
+        <reference name="checkout.onepage.review.info.items.before">
+            <block type="systempay/iframe" name="systempay_iframe_before" template="systempay/iframe.phtml" />
+        </reference>
+    </checkout_onepage_review>
+
+    <systempay_payment_form>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+
+        <reference name="content">
+            <block type="systempay/redirect" name="systempay_redirect" template="systempay/redirect.phtml" />
+        </reference>
+    </systempay_payment_form>
+
+    <systempay_payment_iframe>
+        <reference name="root">
+            <action method="setTemplate"><template>page/empty.phtml</template></action>
+        </reference>
+
+        <reference name="content">
+            <block type="systempay/redirect" name="systempay_iframe_redirect" template="systempay/iframe/redirect.phtml">
+                <block type="core/template" name="systempay_iframe_loader" template="systempay/iframe/loader.phtml" />
+            </block>
+        </reference>
+    </systempay_payment_iframe>
+
+    <systempay_oneclick_shipping_method>
+        <remove name="right"/>
+        <remove name="left"/>
+
+        <block type="systempay/oneclick_shipping_method" name="root" output="toHtml" template="systempay/oneclick/shipping/method.phtml"/>
+    </systempay_oneclick_shipping_method>
+
+    <checkout_cart_index>
+        <reference name="head">
+            <block type="core/template" name="systempay_oneclick_js" template="systempay/oneclick/js.phtml" />
+        </reference>
+
+        <reference name="checkout.cart.methods">
+            <block type="systempay/oneclick_cart" name="systempay_oneclick_cart" before="-" template="systempay/oneclick/cart.phtml" >
+                <block type="core/template" name="systempay_oneclick_cart_shipping" as="systempay_shipping" template="systempay/oneclick/shipping.phtml">
+                    <block type="systempay/oneclick_shipping_address" name="systempay_oneclick_shipping_address" template="systempay/oneclick/shipping/address.phtml"/>
+                    <block type="systempay/oneclick_shipping_method" name="systempay_oneclick_shipping_method" template="systempay/oneclick/shipping/method.phtml"/>
+                </block>
+            </block>
+        </reference>
+    </checkout_cart_index>
+
+    <default>
+        <reference name="cart_sidebar.extra_actions">
+            <block type="systempay/oneclick_cart" name="systempay_oneclick_minicart" template="systempay/oneclick/minicart.phtml" >
+                <block type="core/template" name="systempay_oneclick_minicart_shipping" as="systempay_shipping" template="systempay/oneclick/shipping.phtml">
+                    <block type="systempay/oneclick_shipping_address" name="systempay_oneclick_shipping_address" template="systempay/oneclick/shipping/address.phtml"/>
+                    <block type="systempay/oneclick_shipping_method" name="systempay_oneclick_shipping_method" template="systempay/oneclick/shipping/method.phtml"/>
+                </block>
+            </block>
+        </reference>
+    </default>
+
+    <catalog_product_view>
+        <reference name="head">
+            <block type="core/template" name="systempay_oneclick_js" template="systempay/oneclick/js.phtml" />
+        </reference>
+
+        <reference name="alert.urls">
+            <block type="systempay/oneclick_product" name="systempay_oneclick_product" as="alert_urls" template="systempay/oneclick/product.phtml">
+                <block type="core/template" name="systempay_oneclick_product_shipping" as="systempay_shipping" template="systempay/oneclick/shipping.phtml">
+                    <block type="systempay/oneclick_shipping_address" name="systempay_oneclick_shipping_address" template="systempay/oneclick/shipping/address.phtml"/>
+                    <block type="systempay/oneclick_shipping_method" name="systempay_oneclick_shipping_method" template="systempay/oneclick/shipping/method.phtml"/>
+                </block>
+            </block>
+        </reference>
+    </catalog_product_view>
+</layout>

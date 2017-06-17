@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_system_config_edit>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>systempay.css</name></action>
+        </reference>
+    </adminhtml_system_config_edit>
+
+    <adminhtml_sales_order_create_index>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>systempay.css</name></action>
+        </reference>
+    </adminhtml_sales_order_create_index>
+
+    <adminhtml_systempay_payment_form>
+        <reference name="content">
+            <block type="systempay/adminhtml_redirect" name="systempay_redirect" template="systempay/redirect.phtml" />
+        </reference>
+    </adminhtml_systempay_payment_form>
+</layout>

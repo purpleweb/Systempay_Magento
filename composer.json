@@ -1,0 +1,14 @@
+{
+    "name":"systempay/magento",
+    "type":"magento-module",
+    "homepage":"https://systempay.cyberpluspaiement.com/html/contributions.html",
+    "description":"Systempay MODULES DE PAIEMENT from Magento",
+    "authors":[
+        {
+            "name":"Systempay"
+        }
+    ],
+    "require":{
+        "magento-hackathon/magento-composer-installer":"*"
+    }
+}
